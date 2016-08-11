@@ -1,6 +1,8 @@
 source https://nuget.org/api/v2
 
 nuget FSharp.Core redirects: force
+nuget Websharper
+nuget WebSharper.UI.Next
 
 group Build
   source https://nuget.org/api/v2
