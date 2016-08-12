@@ -10,12 +10,15 @@ This WebSharper Extension provides bindings to the [amplify.js](http://amplifyjs
 #### Request
 
 	description
+	not supported:
 #### Store
 	desc
+	not supported:
 
 #### Publish / Subscribe
 
 	description
+	not supported:
 
 
 ## Build Status
