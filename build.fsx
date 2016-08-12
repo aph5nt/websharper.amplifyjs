@@ -376,11 +376,7 @@ Target "All" DoNothing
   ==> "AssemblyInfo"
   ==> "Build"
   ==> "CopyBinaries"
-  ==> "RunTests"
-  ==> "GenerateReferenceDocs"
-  ==> "GenerateDocs"
   ==> "All"
-  =?> ("ReleaseDocs",isLocalBuild)
 
 "All"
 #if MONO
@@ -389,21 +385,7 @@ Target "All" DoNothing
 #endif
   ==> "NuGet"
   ==> "BuildPackage"
-
-"CleanDocs"
-  ==> "GenerateHelp"
-  ==> "GenerateReferenceDocs"
-  ==> "GenerateDocs"
-
-"CleanDocs"
-  ==> "GenerateHelpDebug"
-
-"GenerateHelpDebug"
-  ==> "KeepRunning"
-
-"ReleaseDocs"
-  ==> "Release"
-
+ 
 "BuildPackage"
   ==> "PublishNuget"
   ==> "Release"

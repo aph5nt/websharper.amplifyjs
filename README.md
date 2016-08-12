@@ -1,30 +1,22 @@
-[![Issue Stats](http://issuestats.com/github/fsprojects/ProjectScaffold/badge/issue)](http://issuestats.com/github/fsprojects/ProjectScaffold)
-[![Issue Stats](http://issuestats.com/github/fsprojects/ProjectScaffold/badge/pr)](http://issuestats.com/github/fsprojects/ProjectScaffold)
+[![Issue Stats](http://issuestats.com/github/aph5nt/websharper.amplifyjs/badge/issue)](http://issuestats.com/github/aph5nt/websharper.amplifyjs)
+[![Issue Stats](http://issuestats.com/github/aph5nt/websharper.amplifyjs/badge/pr)](http://issuestats.com/github/aph5nt/websharper.amplifyjs)
 
-# ProjectScaffold
+# WebSharper.AmplifyJS
 
-This project can be used to scaffold a prototypical .NET solution including file system layout and tooling. This includes a build process that: 
+This WebSharper Extension provides bindings to the [amplify.js](http://amplifyjs.com/) library, version 1.1.2, that brings additional client side functionality for managing requests, cache and local storage and the publish / subsribe.
 
-* updates all AssemblyInfo files
-* compiles the application and runs all test projects
-* generates [SourceLinks](https://github.com/ctaggart/SourceLink)
-* generates API docs based on XML document tags
-* generates [documentation based on Markdown files](http://fsprojects.github.io/ProjectScaffold/writing-docs.html)
-* generates [NuGet](http://www.nuget.org) packages
-* and allows a simple [one step release process](http://fsprojects.github.io/ProjectScaffold/release-process.html).
+## Examples
 
-In order to start the scaffolding process run 
+#### Request
 
-    > build.cmd // on windows    
-    $ ./build.sh  // on unix
-    
-Read the [Getting started tutorial](http://fsprojects.github.io/ProjectScaffold/index.html#Getting-started) to learn more.
+	description
+#### Store
+	desc
 
-Documentation: http://fsprojects.github.io/ProjectScaffold
+#### Publish / Subscribe
 
-## Requirements
+	description
 
-ProjectScaffold requires a local git installation. You can download git from [Git Downloads](https://git-scm.com/downloads).
 
 ## Build Status
 
@@ -34,8 +26,4 @@ Mono | .NET
 
 ## Maintainer(s)
 
-- [@forki](https://github.com/forki)
-- [@pblasucci](https://github.com/pblasucci)
-- [@sergey-tihon](https://github.com/sergey-tihon)
-
-The default maintainer account for projects under "fsprojects" is [@fsprojectsgit](https://github.com/fsprojectsgit) - F# Community Project Incubation Space (repo management)
+- [@aph5nt](https://github.com/aph5nt)

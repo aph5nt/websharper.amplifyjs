@@ -73,12 +73,12 @@
     }),
     cache:Runtime.Field(function()
     {
-     var c;
-     c={};
-     c.number=1000;
+     var _c_32_1;
+     _c_32_1={};
+     _c_32_1.number=1000;
      return{
       $:2,
-      $0:c
+      $0:_c_32_1
      };
     }),
     createPost:function(post)
