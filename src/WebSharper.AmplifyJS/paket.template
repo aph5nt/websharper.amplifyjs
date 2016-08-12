@@ -1,0 +1,27 @@
+type project
+title
+    WebSharper.AmplifyJS
+owners
+    aph5nt
+authors 
+    aph5nt
+projectUrl
+    https://github.com/aph5nt/websharper.amplifyjs
+iconUrl
+    https://raw.githubusercontent.com/aph5nt/SampleProject/master/docs/files/img/logo.png
+licenseUrl
+    https://github.com/aph5nt/websharper.amplifyjs/blob/master/LICENSE.txt
+requireLicenseAcceptance
+    false
+copyright
+    Copyright 2016
+tags
+    WebSharper Amplify 
+    
+summary
+    This WebSharper Extension provides bindings to the [amplify.js](http://amplifyjs.com/) library, version 1.1.2
+    
+description
+    This WebSharper Extension provides bindings to the [amplify.js](http://amplifyjs.com/) library, version 1.1.2
+
+
