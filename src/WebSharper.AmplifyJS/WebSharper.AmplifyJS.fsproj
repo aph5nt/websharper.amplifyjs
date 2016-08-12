@@ -10,7 +10,6 @@
     <RootNamespace>Extension1</RootNamespace>
     <AssemblyName>WebSharper.AmplifyJS</AssemblyName>
     <TargetFSharpCoreVersion>4.3.1.0</TargetFSharpCoreVersion>
-    
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DebugSymbols>true</DebugSymbols>
@@ -50,6 +49,7 @@
     <Compile Include="Bindings.fs" />
     <Compile Include="Main.fs" />
     <None Include="paket.references" />
+    <None Include="paket.template" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="mscorlib" />

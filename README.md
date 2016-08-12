@@ -19,14 +19,7 @@ This WebSharper Extension provides bindings to the [amplify.js](http://amplifyjs
 
 	description
 	not supported:
-
-
-## Build Status
-
-Mono | .NET
----- | ----
-[![Mono CI Build Status](https://img.shields.io/travis/fsprojects/ProjectScaffold/master.svg)](https://travis-ci.org/fsprojects/ProjectScaffold) | [![.NET Build Status](https://img.shields.io/appveyor/ci/fsgit/ProjectScaffold/master.svg)](https://ci.appveyor.com/project/fsgit/projectscaffold)
-
+ 
 ## Maintainer(s)
 
 - [@aph5nt](https://github.com/aph5nt)
