@@ -17,7 +17,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "project", "project", "{BF60
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "WebSharper.AmplifyJS", "src\WebSharper.AmplifyJS\WebSharper.AmplifyJS.fsproj", "{83EBA4C4-1BF5-4508-93C4-F70BDDF70DEB}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "SampleUsage", "src\SampleUsage\SampleUsage.fsproj", "{E140C46D-7DAF-4EBF-B66B-07F23FD15934}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "SampleApp", "src\SampleApp\SampleApp.fsproj", "{498BA864-09F5-433B-96DC-3C671C336035}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,10 @@ Global
 		{83EBA4C4-1BF5-4508-93C4-F70BDDF70DEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{83EBA4C4-1BF5-4508-93C4-F70BDDF70DEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{83EBA4C4-1BF5-4508-93C4-F70BDDF70DEB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E140C46D-7DAF-4EBF-B66B-07F23FD15934}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E140C46D-7DAF-4EBF-B66B-07F23FD15934}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E140C46D-7DAF-4EBF-B66B-07F23FD15934}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E140C46D-7DAF-4EBF-B66B-07F23FD15934}.Release|Any CPU.Build.0 = Release|Any CPU
+		{498BA864-09F5-433B-96DC-3C671C336035}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{498BA864-09F5-433B-96DC-3C671C336035}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{498BA864-09F5-433B-96DC-3C671C336035}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{498BA864-09F5-433B-96DC-3C671C336035}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,4 +1,4 @@
-namespace SampleUsage
+namespace SampleApp
 
 type Global() =
     inherit System.Web.HttpApplication()
