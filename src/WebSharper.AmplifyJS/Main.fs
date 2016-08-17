@@ -20,7 +20,7 @@ module Main =
                  XmlHttpRequest
             ]
             Namespace "WebSharper.Amplify.Resources" [
-                Resource "Amplify" "https://cdnjs.cloudflare.com/ajax/libs/amplifyjs/1.1.2/amplify.js"
+                Resource "Amplify" "http://cdnjs.cloudflare.com/ajax/libs/amplifyjs/1.1.2/amplify.js"
                 |> fun r -> r.AssemblyWide()
             ]
         ]
