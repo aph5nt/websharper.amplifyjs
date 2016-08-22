@@ -125,16 +125,28 @@ module Client =
     // save to store
     Amplify.Store("getAllPosts", ["important data..."]))
 
+    // clear store
+    Amplify.Store("getAllPosts", null))
+
     """
 
     [<Literal>]
     let PubSubCode = """
 
+    // subscription function
+    let subscribeFn = fun(data:obj) -> JS.Alert(data :?> string)
+
+    // subscription function as variable <-- this is very important
+    let subscribeVal = fun (o: obj) -> subscribeFn o
+
     // create subscription
-    Amplify.Subscribe("message", fun(data) -> JavaScript.JS.Alert(data.ToString()))
+    Amplify.Subscribe("message", subscribeVal)
 
     // invoke
     Amplify.Publish("message", "Hello AmplifyJS!")
+
+    // unsubscribe
+    Amplify.Unsubscribe("message", subscribeVal)
 
     """
 
@@ -238,14 +250,17 @@ module Client =
                 div[
                     Doc.Button "Store"    [] (fun()->  Amplify.Amplify.Store("tryStore", "secret data"))
                     Doc.Button "Retrive"  [] (fun() -> JS.Alert( Amplify.Amplify.Store("tryStore") :?> string ) )
-                    Doc.Button "Clear"    [] (fun() -> Amplify.Amplify.Store("tryPubSub", null) |> ignore)
+                    Doc.Button "Clear"    [] (fun() -> Amplify.Amplify.Store("tryStore", null) |> ignore)
                 ]
             ]
         ] 
 
-    let subscribeFn (data:obj) = JS.Alert(data :?> string)
+    let subscribeFn = fun(data:obj) -> JS.Alert(data :?> string)
 
     let PubSubDoc =
+
+        let subscribeVal = fun (o: obj) -> subscribeFn o
+
         divAttr [attr.``class`` "panel panel-default"][
             divAttr[attr.``class`` "panel-heading"][
                 h4[ text " Publish / Subscribe" ]
@@ -259,14 +274,14 @@ module Client =
                 br[]
                 p[text "Demo:"]
                 div[
-                    Doc.Button "Subsribe on message" [] (fun()->  Amplify.Amplify.Subscribe("tryPubSub", subscribeFn))
+                    Doc.Button "Subsribe on message" [] (fun()->  Amplify.Amplify.Subscribe("tryPubSub", subscribeVal))
                     Doc.Button "Publish message"     [] (fun() -> Amplify.Amplify.Publish("tryPubSub", "Hello WebSharper!") |> ignore)
-                    Doc.Button "UnSubscribe"         [] (fun() -> Amplify.Amplify.Unsubscribe("tryPubSub", subscribeFn) |> ignore)
+                    Doc.Button "UnSubscribe"         [] (fun() -> Amplify.Amplify.Unsubscribe("tryPubSub", subscribeVal) |> ignore)
                 ]
             ]
         ] 
 
-    let Main =
+    let Main =   
         JQuery.Of("#main").Empty().Ignore
 
         IndexTemplate.Main.Doc(
