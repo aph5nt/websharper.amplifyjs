@@ -5,6 +5,7 @@ Check [this link](https://github.com/aph5nt/websharper.amplifyjs/tree/master/src
 
 There is also a Nuget package available [here](https://www.nuget.org/packages/WebSharper.AmplifyJS/)
 
+You can check live examples [https://aph5nt.github.io/websharper.amplifyjs](https://aph5nt.github.io/websharper.amplifyjs/)
 
 ## Maintainer(s)
 

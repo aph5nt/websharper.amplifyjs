@@ -17260,7 +17260,7 @@ var JSON;JSON||(JSON={}),function(){"use strict";function i(n){return n<10?"0"+n
      jQuery("#main").empty();
      arg20=List.ofArray([Doc.TextNode("Examples")]);
      arg201=List.ofArray([Doc.TextNode(" The following examples demonstrates the usage of the AmplifyJS library with WebSharper. For more detailed documentation please visit "),Doc.Element("a",List.ofArray([AttrProxy.Create("href","http://amplifyjs.com/")]),List.ofArray([Doc.TextNode("amplifyjs.com")]))]);
-     arg202=List.ofArray([Doc.TextNode(" For testing porposes "),Doc.Element("a",List.ofArray([AttrProxy.Create("href","https://jsonplaceholder.typicode.com")]),List.ofArray([Doc.TextNode("jsonplaceholder")])),Doc.TextNode(" service is being used")]);
+     arg202=List.ofArray([Doc.TextNode(" For testing purposes "),Doc.Element("a",List.ofArray([AttrProxy.Create("href","https://jsonplaceholder.typicode.com")]),List.ofArray([Doc.TextNode("jsonplaceholder")])),Doc.TextNode(" service is being used")]);
      arg203=Runtime.New(T,{
       $:0
      });

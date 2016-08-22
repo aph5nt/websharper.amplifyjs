@@ -293,7 +293,7 @@ module Client =
                ]
 
                p [
-                    text " For testing porposes "
+                    text " For testing purposes "
                     aAttr[attr.href "https://jsonplaceholder.typicode.com"][text "jsonplaceholder"]
                     text " service is being used"
                ]
