@@ -17256,7 +17256,7 @@ var JSON;JSON||(JSON={}),function(){"use strict";function i(n){return n<10?"0"+n
    Client:{
     Main:Runtime.Field(function()
     {
-     var container,arg20,arg201,arg202,arg203;
+     var _container_287_1,arg20,arg201,arg202,arg203;
      jQuery("#main").empty();
      arg20=List.ofArray([Doc.TextNode("Examples")]);
      arg201=List.ofArray([Doc.TextNode(" The following examples demonstrates the usage of the AmplifyJS library with WebSharper. For more detailed documentation please visit "),Doc.Element("a",List.ofArray([AttrProxy.Create("href","http://amplifyjs.com/")]),List.ofArray([Doc.TextNode("amplifyjs.com")]))]);
@@ -17264,8 +17264,8 @@ var JSON;JSON||(JSON={}),function(){"use strict";function i(n){return n<10?"0"+n
      arg203=Runtime.New(T,{
       $:0
      });
-     container=List.ofArray([Doc.Element("h3",[],arg20),Doc.Element("p",[],arg201),Doc.Element("p",[],arg202),Doc.Element("br",[],arg203),Client.RequestDoc(),Client.StoreDoc(),Client.PubSubDoc()]);
-     return Doc.RunById("main",Doc.Concat([Doc.TextNode("\n        "),Doc.Element("div",[],Arrays.ofSeq(container)),Doc.TextNode("\n    ")]));
+     _container_287_1=List.ofArray([Doc.Element("h3",[],arg20),Doc.Element("p",[],arg201),Doc.Element("p",[],arg202),Doc.Element("br",[],arg203),Client.RequestDoc(),Client.StoreDoc(),Client.PubSubDoc()]);
+     return Doc.RunById("main",Doc.Concat([Doc.TextNode("\n        "),Doc.Element("div",[],Arrays.ofSeq(_container_287_1)),Doc.TextNode("\n    ")]));
     }),
     PostModel:Runtime.Class({},{
      Bind:function(posts)
@@ -17296,8 +17296,8 @@ var JSON;JSON||(JSON={}),function(){"use strict";function i(n){return n<10?"0"+n
     }),
     PubSubDoc:Runtime.Field(function()
     {
-     var subscribeVal,ats,arg20,ats1,arg201,arg202,arg203,arg204,arg205,arg206,arg207;
-     subscribeVal=function(o)
+     var _subscribeVal_262_2,ats,arg20,ats1,arg201,arg202,arg203,arg204,arg205,arg206,arg207;
+     _subscribeVal_262_2=function(o)
      {
       return Client.subscribeFn(o);
      };
@@ -17311,7 +17311,7 @@ var JSON;JSON||(JSON={}),function(){"use strict";function i(n){return n<10?"0"+n
      arg203=List.ofArray([Doc.TextNode("Demo:")]);
      arg205=function()
      {
-      return amplify.subscribe("tryPubSub",subscribeVal);
+      return amplify.subscribe("tryPubSub",_subscribeVal_262_2);
      };
      arg206=function()
      {
@@ -17322,7 +17322,7 @@ var JSON;JSON||(JSON={}),function(){"use strict";function i(n){return n<10?"0"+n
      arg207=function()
      {
       var value;
-      value=amplify.unsubscribe("tryPubSub",subscribeVal);
+      value=amplify.unsubscribe("tryPubSub",_subscribeVal_262_2);
       return;
      };
      arg204=List.ofArray([Doc.Button("Subsribe on message",Runtime.New(T,{
@@ -17336,13 +17336,13 @@ var JSON;JSON||(JSON={}),function(){"use strict";function i(n){return n<10?"0"+n
     }),
     RequestDoc:Runtime.Field(function()
     {
-     var postIdInput,titleInput,bodyIndput,getPostByIdhandler,ats,arg20,ats1,arg201,arg202,arg203,arg204,arg205,arg206,arg207,arg208,arg209,arg20a,arg20b,arg20c,arg20d,arg20e,arg20f,arg2010,attrs,arg2011;
+     var _postIdInput_158_1,_titleInput_159_1,_bodyIndput_160_1,_getPostByIdhandler_162_1,ats,arg20,ats1,arg201,arg202,arg203,arg204,arg205,arg206,arg207,arg208,arg209,arg20a,arg20b,arg20c,arg20d,arg20e,arg20f,arg2010,attrs,arg2011;
      Client.defineGetById();
      Client.defineGetAll();
-     postIdInput=Var.Create("");
-     titleInput=Var.Create("");
-     bodyIndput=Var.Create("");
-     getPostByIdhandler=function(data)
+     _postIdInput_158_1=Var.Create("");
+     _titleInput_159_1=Var.Create("");
+     _bodyIndput_160_1=Var.Create("");
+     _getPostByIdhandler_162_1=function(data)
      {
       return alert("Post title: "+data.title);
      };
@@ -17357,13 +17357,13 @@ var JSON;JSON||(JSON={}),function(){"use strict";function i(n){return n<10?"0"+n
      arg205=function()
      {
       return amplify.request("getPostById",{
-       id:Var.Get(postIdInput)
+       id:Var.Get(_postIdInput_158_1)
       },function(data)
       {
-       return getPostByIdhandler(data);
+       return _getPostByIdhandler_162_1(data);
       });
      };
-     arg204=List.ofArray([Doc.Input(List.ofArray([AttrProxy.Create("placeholder","Enter the post id here")]),postIdInput),Doc.Button("Get",Runtime.New(T,{
+     arg204=List.ofArray([Doc.Input(List.ofArray([AttrProxy.Create("placeholder","Enter the post id here")]),_postIdInput_158_1),Doc.Button("Get",Runtime.New(T,{
       $:0
      }),arg205)]);
      arg206=Runtime.New(T,{
@@ -17406,7 +17406,7 @@ var JSON;JSON||(JSON={}),function(){"use strict";function i(n){return n<10?"0"+n
      attrs=Runtime.New(T,{
       $:0
      });
-     arg2010=List.ofArray([Doc.Input(List.ofArray([AttrProxy.Create("placeholder","Enter title here")]),titleInput),Doc.Input(List.ofArray([AttrProxy.Create("placeholder","Enter body here")]),bodyIndput),Doc.Button("Create post",attrs,function()
+     arg2010=List.ofArray([Doc.Input(List.ofArray([AttrProxy.Create("placeholder","Enter title here")]),_titleInput_159_1),Doc.Input(List.ofArray([AttrProxy.Create("placeholder","Enter body here")]),_bodyIndput_160_1),Doc.Button("Create post",attrs,function()
      {
       var settings,reqs;
       settings={};
@@ -17416,8 +17416,8 @@ var JSON;JSON||(JSON={}),function(){"use strict";function i(n){return n<10?"0"+n
       settings.data={
        userId:1,
        id:0,
-       title:Var.Get(titleInput),
-       body:Var.Get(bodyIndput)
+       title:Var.Get(_titleInput_159_1),
+       body:Var.Get(_bodyIndput_160_1)
       };
       amplify.request.define("createPost","ajax",settings);
       reqs={
