@@ -17296,7 +17296,11 @@ var JSON;JSON||(JSON={}),function(){"use strict";function i(n){return n<10?"0"+n
     }),
     PubSubDoc:Runtime.Field(function()
     {
-     var ats,arg20,ats1,arg201,arg202,arg203,arg204,arg205,arg206,arg207;
+     var subscribeVal,ats,arg20,ats1,arg201,arg202,arg203,arg204,arg205,arg206,arg207;
+     subscribeVal=function(o)
+     {
+      return Client.subscribeFn(o);
+     };
      ats=List.ofArray([AttrProxy.Create("class","panel panel-default")]);
      arg20=List.ofArray([Doc.TextNode(" Publish / Subscribe")]);
      ats1=List.ofArray([AttrProxy.Create("class","panel-body")]);
@@ -17307,10 +17311,7 @@ var JSON;JSON||(JSON={}),function(){"use strict";function i(n){return n<10?"0"+n
      arg203=List.ofArray([Doc.TextNode("Demo:")]);
      arg205=function()
      {
-      return amplify.subscribe("tryPubSub",function(data)
-      {
-       return Client.subscribeFn(data);
-      });
+      return amplify.subscribe("tryPubSub",subscribeVal);
      };
      arg206=function()
      {
@@ -17321,10 +17322,7 @@ var JSON;JSON||(JSON={}),function(){"use strict";function i(n){return n<10?"0"+n
      arg207=function()
      {
       var value;
-      value=amplify.unsubscribe("tryPubSub",function(data)
-      {
-       return Client.subscribeFn(data);
-      });
+      value=amplify.unsubscribe("tryPubSub",subscribeVal);
       return;
      };
      arg204=List.ofArray([Doc.Button("Subsribe on message",Runtime.New(T,{
@@ -17334,7 +17332,7 @@ var JSON;JSON||(JSON={}),function(){"use strict";function i(n){return n<10?"0"+n
      }),arg206),Doc.Button("UnSubscribe",Runtime.New(T,{
       $:0
      }),arg207)]);
-     return Doc.Element("div",ats,List.ofArray([Doc.Element("div",List.ofArray([AttrProxy.Create("class","panel-heading")]),List.ofArray([Doc.Element("h4",[],arg20)])),Doc.Element("div",ats1,List.ofArray([Doc.Element("p",[],arg201),Doc.Element("pre",List.ofArray([AttrProxy.Create("class","prettyprint")]),List.ofArray([Doc.TextNode("\r\n\r\n    // create subscription\r\n    Amplify.Subscribe(\"message\", fun(data) -> JavaScript.JS.Alert(data.ToString()))\r\n\r\n    // invoke\r\n    Amplify.Publish(\"message\", \"Hello AmplifyJS!\")\r\n\r\n    ")])),Doc.Element("br",[],arg202),Doc.Element("p",[],arg203),Doc.Element("div",[],arg204)]))]));
+     return Doc.Element("div",ats,List.ofArray([Doc.Element("div",List.ofArray([AttrProxy.Create("class","panel-heading")]),List.ofArray([Doc.Element("h4",[],arg20)])),Doc.Element("div",ats1,List.ofArray([Doc.Element("p",[],arg201),Doc.Element("pre",List.ofArray([AttrProxy.Create("class","prettyprint")]),List.ofArray([Doc.TextNode("\r\n\r\n    // subscription function\r\n    let subscribeFn = fun(data:obj) -> JS.Alert(data :?> string)\r\n\r\n    // subscription function as variable <-- this is very important\r\n    let subscribeVal = fun (o: obj) -> subscribeFn o\r\n\r\n    // create subscription\r\n    Amplify.Subscribe(\"message\", subscribeVal)\r\n\r\n    // invoke\r\n    Amplify.Publish(\"message\", \"Hello AmplifyJS!\")\r\n\r\n    // unsubscribe\r\n    Amplify.Unsubscribe(\"message\", subscribeVal)\r\n\r\n    ")])),Doc.Element("br",[],arg202),Doc.Element("p",[],arg203),Doc.Element("div",[],arg204)]))]));
     }),
     RequestDoc:Runtime.Field(function()
     {
@@ -17462,7 +17460,7 @@ var JSON;JSON||(JSON={}),function(){"use strict";function i(n){return n<10?"0"+n
      arg207=function()
      {
       var value;
-      value=amplify.store("tryPubSub",null);
+      value=amplify.store("tryStore",null);
       return;
      };
      arg204=List.ofArray([Doc.Button("Store",Runtime.New(T,{
@@ -17472,7 +17470,7 @@ var JSON;JSON||(JSON={}),function(){"use strict";function i(n){return n<10?"0"+n
      }),arg206),Doc.Button("Clear",Runtime.New(T,{
       $:0
      }),arg207)]);
-     return Doc.Element("div",ats,List.ofArray([Doc.Element("div",List.ofArray([AttrProxy.Create("class","panel-heading")]),List.ofArray([Doc.Element("h4",[],arg20)])),Doc.Element("div",ats1,List.ofArray([Doc.Element("p",[],arg201),Doc.Element("pre",List.ofArray([AttrProxy.Create("class","prettyprint")]),List.ofArray([Doc.TextNode("\r\n\r\n    // read from store\r\n    let cache = Amplify.Store(\"getAllPosts\")\r\n    if cache <> JavaScript.JS.Undefined then \r\n        callback <| As<string list> cache\r\n\r\n    // save to store\r\n    Amplify.Store(\"getAllPosts\", [\"important data...\"]))\r\n\r\n    ")])),Doc.Element("br",[],arg202),Doc.Element("p",[],arg203),Doc.Element("div",[],arg204)]))]));
+     return Doc.Element("div",ats,List.ofArray([Doc.Element("div",List.ofArray([AttrProxy.Create("class","panel-heading")]),List.ofArray([Doc.Element("h4",[],arg20)])),Doc.Element("div",ats1,List.ofArray([Doc.Element("p",[],arg201),Doc.Element("pre",List.ofArray([AttrProxy.Create("class","prettyprint")]),List.ofArray([Doc.TextNode("\r\n\r\n    // read from store\r\n    let cache = Amplify.Store(\"getAllPosts\")\r\n    if cache <> JavaScript.JS.Undefined then \r\n        callback <| As<string list> cache\r\n\r\n    // save to store\r\n    Amplify.Store(\"getAllPosts\", [\"important data...\"]))\r\n\r\n    // clear store\r\n    Amplify.Store(\"getAllPosts\", null))\r\n\r\n    ")])),Doc.Element("br",[],arg202),Doc.Element("p",[],arg203),Doc.Element("div",[],arg204)]))]));
     }),
     defineGetAll:function()
     {
